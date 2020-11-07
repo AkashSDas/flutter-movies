@@ -20,6 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
         horizontal: Constants.space,
         vertical: Constants.space,
       ),
+      color: Constants.primaryBg,
       child: SafeArea(
         child: ListView(
           children: [

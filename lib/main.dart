@@ -46,13 +46,13 @@ class MyApp extends StatelessWidget {
             fontWeight: FontWeight.w800,
           ),
           bodyText1: TextStyle(
-            fontSize: 16,
+            fontSize: 18,
             color: Constants.textColor,
             fontFamily: Constants.bodyFont,
             fontWeight: FontWeight.w400,
           ),
           bodyText2: TextStyle(
-            fontSize: 12,
+            fontSize: 18,
             color: Constants.textColor,
             fontFamily: Constants.bodyFont,
             fontWeight: FontWeight.w400,

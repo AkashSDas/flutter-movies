@@ -28,6 +28,6 @@ flutter:
       fonts:
         - asset: assets/fonts/Nunito-Regular.ttf
           weight: 400
-    - family:
+    - family: PorterSansBlock
       fonts:
         - asset: assets/fonts/porter-sans-inline-block.ttf

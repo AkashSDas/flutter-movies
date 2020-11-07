@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_movies/constants.dart' as Constants;
 
-Widget logo(String text, BuildContext context) {
+Widget Logo(String text, BuildContext context) {
   return Padding(
     padding: EdgeInsets.symmetric(
       horizontal: Constants.space,

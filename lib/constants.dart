@@ -16,3 +16,16 @@ const logoFont = 'PorterSansBlock';
 const headlineFont = 'Montserrat';
 const btnFont = 'Montserrat';
 const bodyFont = 'Nunito';
+
+// text field decoration
+final textFieldBoxDecoration = BoxDecoration(
+  color: secondaryBg,
+  borderRadius: BorderRadius.circular(space),
+  boxShadow: [
+    BoxShadow(
+      color: Colors.black12,
+      blurRadius: 6.0,
+      offset: Offset(0, 2),
+    ),
+  ],
+);

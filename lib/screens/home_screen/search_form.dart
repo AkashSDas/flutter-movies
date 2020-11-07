@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_movies/constants.dart' as Constants;
+import 'package:flutter_movies/screens/home_screen/controller.dart';
 
 class SearchForm extends StatefulWidget {
   @override
@@ -8,6 +9,7 @@ class SearchForm extends StatefulWidget {
 }
 
 class _SearchFormState extends State<SearchForm> {
+  HomeController _homeController = HomeController();
   TextEditingController _textEditingController = TextEditingController();
   String movieName; // movie or tv show
 
@@ -21,6 +23,16 @@ class _SearchFormState extends State<SearchForm> {
   // ===================
   // Widgets
   // ===================
+  Widget _submitBtn() {
+    return IconButton(
+      onPressed: () => _homeController.fetchMovies(movieName),
+      icon: Icon(
+        AntDesign.search1,
+        color: Theme.of(context).iconTheme.color,
+      ),
+    );
+  }
+
   Widget _buildMovieNameTextField() {
     return Container(
       decoration: Constants.textFieldBoxDecoration,
@@ -35,7 +47,7 @@ class _SearchFormState extends State<SearchForm> {
             horizontal: Constants.space,
             vertical: Constants.space,
           ),
-          suffixIcon: Icon(AntDesign.search1),
+          suffixIcon: _submitBtn(),
           hintText: 'Search movies',
           hintStyle: Theme.of(context).textTheme.bodyText2,
         ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_movies/screens/screens.dart';
 
 import './constants.dart' as Constants;
 
@@ -17,6 +18,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Movies',
       debugShowCheckedModeBanner: false,
+
+      // Routes
+      routes: {
+        '/': (BuildContext context) => HomeScreen(),
+      },
 
       // Theme
       theme: ThemeData(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 // spacing constant
-const space = 10;
+const double space = 10;
 
 // colors
 const primaryBg = Color(0xFF2c2f33);

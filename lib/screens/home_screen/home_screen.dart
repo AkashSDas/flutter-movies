@@ -23,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
       child: SafeArea(
         child: ListView(
           children: [
-            Logo('Flutter Movies', context),
+            Logo(context),
           ],
         ),
       ),

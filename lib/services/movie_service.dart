@@ -16,4 +16,9 @@ class MovieService extends ChangeNotifier {
     this.displayLoader = false;
     notifyListeners();
   }
+
+  void setDisplayLoader(bool display) {
+    this.displayLoader = true;
+    notifyListeners();
+  }
 }

@@ -11,7 +11,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext contex) {
     // changing statusbar color
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: Colors.white,
+      // statusBarColor: Colors.white,
+      statusBarColor: Colors.black,
       statusBarBrightness: Brightness.dark,
     ));
 
@@ -41,6 +42,12 @@ class MyApp extends StatelessWidget {
           ),
           headline2: TextStyle(
             fontSize: 18,
+            color: Constants.textColor,
+            fontFamily: Constants.headlineFont,
+            fontWeight: FontWeight.w800,
+          ),
+          headline3: TextStyle(
+            fontSize: 16,
             color: Constants.textColor,
             fontFamily: Constants.headlineFont,
             fontWeight: FontWeight.w800,

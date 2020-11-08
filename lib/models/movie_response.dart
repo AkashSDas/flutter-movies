@@ -1,7 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_movies/models/movie.dart';
 
-class MovieResponse extends ChangeNotifier {
+class MovieResponse {
   List<Movie> movies;
   String error;
   String notFoundMsg;

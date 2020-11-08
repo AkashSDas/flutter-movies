@@ -1,6 +1,7 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_movies/models/movie.dart';
 
-class MovieResponse {
+class MovieResponse extends ChangeNotifier {
   List<Movie> movies;
   String error;
   String notFoundMsg;
@@ -21,11 +22,15 @@ class MovieResponse {
       this.error = '';
       this.notFoundMsg = '';
     }
+
+    notifyListeners();
   }
 
   MovieResponse.withError(String errorValue) {
     this.movies = [];
     this.error = errorValue;
     this.notFoundMsg = '';
+
+    notifyListeners();
   }
 }

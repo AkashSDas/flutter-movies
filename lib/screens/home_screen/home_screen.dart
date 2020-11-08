@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_movies/constants.dart' as Constants;
 import 'package:flutter_movies/screens/home_screen/logo.dart';
+import 'package:flutter_movies/screens/home_screen/movie_list.dart';
 import 'package:flutter_movies/screens/home_screen/search_form.dart';
 import 'package:flutter_movies/services/services.dart';
 import 'package:provider/provider.dart';
@@ -23,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
           Consumer<MovieService>(
             builder: (context, data, child) {
               if (data.movies != null) {
-                return Text(data.movies.toString());
+                return MoviesList();
               }
               return Text('Find movies from a wide range of collection');
             },

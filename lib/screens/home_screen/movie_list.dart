@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_movies/constants.dart';
 import 'package:flutter_movies/models/models.dart';
+import 'package:flutter_movies/screens/home_screen/movie_card.dart';
 import 'package:flutter_movies/services/services.dart';
 import 'package:flutter_movies/shared/widgets/widgets.dart';
 import 'package:provider/provider.dart';
@@ -25,61 +25,7 @@ class _MoviesListState extends State<MoviesList> {
       physics: ClampingScrollPhysics(),
       itemCount: movies.length,
       itemBuilder: (context, index) {
-        return Container(
-          decoration: textFieldBoxDecoration,
-          margin: EdgeInsets.all(space),
-          child: Stack(
-            children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(space * 3),
-                child: Container(
-                  height: space * 45,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: NetworkImage(movies[index].posterImg),
-                      fit: BoxFit.fill,
-                    ),
-                  ),
-                ),
-              ),
-              Container(decoration: movieCardBoxDecoration),
-              Positioned(
-                bottom: 0,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(space * 3),
-                  child: Container(
-                    width: MediaQuery.of(context).size.width * 0.9,
-                    padding: EdgeInsets.only(
-                      left: space,
-                      bottom: space,
-                      top: space,
-                    ),
-                    color: Color(0xFF151C26).withOpacity(0.7),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          movies[index].title,
-                          style: Theme.of(context).textTheme.headline2,
-                        ),
-                        SizedBox(height: space),
-                        Text(
-                          movies[index].year,
-                          style: Theme.of(context).textTheme.headline2,
-                        ),
-                        SizedBox(height: space),
-                        MovieTypeTag(
-                          text: movies[index].type,
-                          color: btnPrimaryColor,
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
-        );
+        return MovieCard(movie: movies[index]);
       },
     );
   }

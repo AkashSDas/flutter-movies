@@ -3,6 +3,8 @@ import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_movies/constants.dart' as Constants;
 import 'package:flutter_movies/models/models.dart';
 import 'package:flutter_movies/screens/home_screen/controller.dart';
+import 'package:flutter_movies/services/services.dart';
+import 'package:provider/provider.dart';
 
 class SearchForm extends StatefulWidget {
   @override
@@ -25,12 +27,18 @@ class _SearchFormState extends State<SearchForm> {
   // Widgets
   // ===================
   Widget _submitBtn() {
+    MovieService _movieService = Provider.of<MovieService>(context);
+
     return IconButton(
       onPressed: () async {
         MovieResponse movieResponse = await _homeController.fetchMovies(
           movieName,
         );
-        print(movieResponse.movies.map((m) => print(m.title)));
+        _movieService.getMovieData(
+          movieResponse.movies,
+          movieResponse.error,
+          movieResponse.notFoundMsg,
+        );
       },
       icon: Icon(
         AntDesign.search1,

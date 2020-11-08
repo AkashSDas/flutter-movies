@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_movies/constants.dart' as Constants;
-import 'package:flutter_movies/models/models.dart';
 import 'package:flutter_movies/screens/home_screen/logo.dart';
 import 'package:flutter_movies/screens/home_screen/search_form.dart';
+import 'package:flutter_movies/services/services.dart';
 import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -16,14 +16,20 @@ class _HomeScreenState extends State<HomeScreen> {
   // =======================
   Widget _buildMoviesProvider() {
     return ChangeNotifierProvider(
-      create: (context) => MovieResponse(),
+      create: (context) => MovieService(
+        movies: [],
+        error: '',
+        notFoundMsg: '',
+      ),
       child: Column(
         children: [
           SearchForm(),
-          Consumer<MovieResponse>(
+          Consumer<MovieService>(
             builder: (context, data, child) {
-              print('=====> $data');
-              return Text(data.movies.toString());
+              if (data.movies != null) {
+                return Text(data.movies[0].title);
+              }
+              return Text('No movies');
             },
           ),
         ],

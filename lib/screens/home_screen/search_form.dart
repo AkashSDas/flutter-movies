@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_movies/constants.dart' as Constants;
+import 'package:flutter_movies/models/models.dart';
 import 'package:flutter_movies/screens/home_screen/controller.dart';
 
 class SearchForm extends StatefulWidget {
@@ -25,7 +26,12 @@ class _SearchFormState extends State<SearchForm> {
   // ===================
   Widget _submitBtn() {
     return IconButton(
-      onPressed: () => _homeController.fetchMovies(movieName),
+      onPressed: () async {
+        MovieResponse movieResponse = await _homeController.fetchMovies(
+          movieName,
+        );
+        print(movieResponse.movies.map((m) => print(m.title)));
+      },
       icon: Icon(
         AntDesign.search1,
         color: Theme.of(context).iconTheme.color,

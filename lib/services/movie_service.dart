@@ -5,13 +5,15 @@ class MovieService extends ChangeNotifier {
   List<Movie> movies;
   String error;
   String notFoundMsg;
+  bool displayLoader;
 
-  MovieService({this.movies, this.error, this.notFoundMsg});
+  MovieService({this.movies, this.error, this.notFoundMsg, this.displayLoader});
 
   void getMovieData(List<Movie> movies, String error, String notFoundMsg) {
     this.movies = movies;
     this.error = error;
     this.notFoundMsg = notFoundMsg;
+    this.displayLoader = false;
     notifyListeners();
   }
 }

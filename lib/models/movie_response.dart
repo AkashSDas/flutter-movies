@@ -22,15 +22,11 @@ class MovieResponse extends ChangeNotifier {
       this.error = '';
       this.notFoundMsg = '';
     }
-
-    notifyListeners();
   }
 
   MovieResponse.withError(String errorValue) {
     this.movies = [];
     this.error = errorValue;
     this.notFoundMsg = '';
-
-    notifyListeners();
   }
 }

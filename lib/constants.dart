@@ -21,7 +21,7 @@ const bodyFont = 'Nunito';
 // text field decoration
 final textFieldBoxDecoration = BoxDecoration(
   color: secondaryBg,
-  borderRadius: BorderRadius.circular(space),
+  borderRadius: BorderRadius.circular(space * 3),
   boxShadow: [
     BoxShadow(
       color: Colors.black12,
@@ -29,4 +29,20 @@ final textFieldBoxDecoration = BoxDecoration(
       offset: Offset(0, 2),
     ),
   ],
+);
+
+// movie card box decoration
+final movieCardBoxDecoration = BoxDecoration(
+  gradient: LinearGradient(
+    colors: [
+      Color(0xFF151C26).withOpacity(0.1),
+      Color(0xFF151C26).withOpacity(0.0),
+    ],
+    begin: Alignment.bottomCenter,
+    end: Alignment.topCenter,
+    stops: [
+      0.0,
+      0.9,
+    ],
+  ),
 );

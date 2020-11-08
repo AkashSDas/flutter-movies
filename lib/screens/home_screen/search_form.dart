@@ -31,9 +31,12 @@ class _SearchFormState extends State<SearchForm> {
 
     return IconButton(
       onPressed: () async {
+        _movieService.setDisplayLoader(true);
         MovieResponse movieResponse = await _homeController.fetchMovies(
           movieName,
         );
+
+        // displayLoader will get to false using getMoviesData
         _movieService.getMovieData(
           movieResponse.movies,
           movieResponse.error,

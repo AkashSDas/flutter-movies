@@ -16,20 +16,16 @@ class _HomeScreenState extends State<HomeScreen> {
   // =======================
   Widget _buildMoviesProvider() {
     return ChangeNotifierProvider(
-      create: (context) => MovieService(
-        movies: [],
-        error: '',
-        notFoundMsg: '',
-      ),
+      create: (context) => MovieService(),
       child: Column(
         children: [
           SearchForm(),
           Consumer<MovieService>(
             builder: (context, data, child) {
               if (data.movies != null) {
-                return Text(data.movies[0].title);
+                return Text(data.movies.toString());
               }
-              return Text('No movies');
+              return Text('Find movies from a wide range of collection');
             },
           ),
         ],

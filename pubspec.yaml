@@ -21,16 +21,20 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
+  assets:
+    - assets/fonts/
+    - assets/animations/
+
   fonts:
     - family: OpenSans
       fonts:
-        - asset: /assets/fonts/OpenSans-Bold.ttf
+        - asset: assets/fonts/OpenSans-Bold.ttf
           weight: 700
     - family: SourceCodePro
       fonts:
-        - asset: /assets/fonts/SourceCodePro-Regular.ttf
+        - asset: assets/fonts/SourceCodePro-Regular.ttf
           weight: 400
     - family: PorterSans
       fonts:
-        - asset: /assets/fonts/porter-sans-inline-block.ttf
+        - asset: assets/fonts/porter-sans-inline-block.ttf
           weight: 400

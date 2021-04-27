@@ -1,7 +1,7 @@
 import 'package:flare_splash_screen/flare_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_movies/screens/HomeScreen.dart';
+import 'package:flutter_movies/screens/screens.dart';
 import 'package:flutter_movies/style.dart';
 
 void main() => runApp(MyApp());
@@ -28,6 +28,14 @@ class MyApp extends StatelessWidget {
                 ),
               ),
             ),
+        '/player': (context) => PlayerScreen(),
+
+        /// Two entry for HomeScreen widget so that when the
+        /// app initialize and we go to HomeScreen through
+        /// route '/' we see the splash screen and then the other
+        /// time we want to go to HomeScreen we don't see the splash
+        /// screen
+        '/home': (context) => HomeScreen(),
       },
     );
   }

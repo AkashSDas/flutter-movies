@@ -1,0 +1,44 @@
+name: flutter_movies
+description: A new Flutter project.
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  dio: ^4.0.0
+  flare_flutter: ^3.0.0
+  flare_splash_screen: ^4.0.0
+  font_awesome_flutter: ^9.0.0
+  provider: ^5.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/fonts/
+    - assets/animations/
+
+  fonts:
+    - family: OpenSans
+      fonts:
+        - asset: assets/fonts/OpenSans-Bold.ttf
+          weight: 700
+    - family: SourceCodePro
+      fonts:
+        - asset: assets/fonts/SourceCodePro-Regular.ttf
+          weight: 400
+    - family: PorterSans
+      fonts:
+        - asset: assets/fonts/porter-sans-inline-block.ttf
+          weight: 400

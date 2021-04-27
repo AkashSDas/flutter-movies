@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_movies/shared/shared.dart';
 import 'package:flutter_movies/style.dart';
-import 'package:flutter_movies/widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
   @override

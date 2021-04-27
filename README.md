@@ -1,16 +1,42 @@
-# flutter_movies
+# flutter-movies
 
-A new Flutter project.
+Beautiful flutter app where you can search movies. The app uses [OMDb API](http://www.omdbapi.com/) service to for movies data.
+
+The splash screen has Rive(Flare) animation is displayed which can be found [here](https://flare.rive.app/a/AkashSDas/files/flare/flutter-movies-app-splash-screen-animation/preview). The app uses `Provider` for the movies data to be shared among widgets.
+
+![](./docs/demo.gif)
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+**Clone the repo**
 
-A few resources to get you started if this is your first Flutter project:
+```bash
+git clone https://github.com/AkashSDas/flutter-movies
+```
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+**Get inside the project dir and install dependencies**
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+cd flutter-movies
+flutter pub get
+```
+
+**Open a simulator or connect a device and after that execute the below command to run the flutter app**
+
+```bash
+flutter run
+```
+
+## Security
+
+To make `http requests` for fetching the movies data we have to add to fields in `android/` and `ios/` (this is already added in this project). If not done then you will get an error of
+
+```bash
+Bad state: Insecure HTTP is not allowed by platform: <api-url>
+```
+
+To avoid this follow the [stackoverflow post](https://stackoverflow.com/questions/64197752/bad-state-insecure-http-is-not-allowed-by-platform)
+
+## License
+
+![MIT](./LICENSE)

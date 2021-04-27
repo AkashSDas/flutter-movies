@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_movies/shared/shared.dart';
 import 'package:flutter_movies/style.dart';
+import 'package:flutter_movies/widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -15,9 +16,7 @@ class HomeScreen extends StatelessWidget {
             height: double.infinity,
             width: double.infinity,
             padding: Style.paddingSymmetric(horizontal: 1, vertical: 1),
-            child: ListView(
-              children: [],
-            ),
+            child: MovieSimpleListView(),
           ),
           bottomNavigationBar: AppBottomNav(),
         ),

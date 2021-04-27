@@ -9,24 +9,24 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: Colors.white,
-      statusBarBrightness: Brightness.light,
-      systemNavigationBarColor: Colors.white,
-      systemNavigationBarIconBrightness: Brightness.light,
-    ));
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
 
     return MaterialApp(
       title: 'Flutter Movies',
       debugShowCheckedModeBanner: false,
       theme: Style.themeData,
       routes: {
-        '/': (context) => SplashScreen.navigate(
-              name: 'assets/animations/flare-splash-screen.flr',
-              next: (context) => HomeScreen(),
-              until: () => Future.delayed(Duration(seconds: 3)),
-              startAnimation: 'go',
-              backgroundColor: Theme.of(context).primaryColor,
+        '/': (context) => Container(
+              color: Theme.of(context).primaryColor,
+              child: SafeArea(
+                child: SplashScreen.navigate(
+                  name: 'assets/animations/flare-splash-screen.flr',
+                  next: (context) => HomeScreen(),
+                  until: () => Future.delayed(Duration(seconds: 3)),
+                  startAnimation: 'go',
+                  backgroundColor: Theme.of(context).primaryColor,
+                ),
+              ),
             ),
       },
     );

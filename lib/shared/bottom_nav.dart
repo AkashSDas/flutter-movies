@@ -87,7 +87,7 @@ class _AppBottomNavState extends State<AppBottomNav> {
         Navigator.pushNamed(context, '/player');
         break;
       case 2:
-        // Navigator.pushNamed(context, '/pick-camera-images');
+        Navigator.pushNamed(context, '/search');
         break;
     }
   }

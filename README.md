@@ -35,8 +35,8 @@ To make `http requests` for fetching the movies data we have to add to fields in
 Bad state: Insecure HTTP is not allowed by platform: <api-url>
 ```
 
-To avoid this follow the [stackoverflow post](https://stackoverflow.com/questions/64197752/bad-state-insecure-http-is-not-allowed-by-platform)
+To avoid this error, follow the [stackoverflow post](https://stackoverflow.com/questions/64197752/bad-state-insecure-http-is-not-allowed-by-platform).
 
 ## License
 
-![MIT](./LICENSE)
+[MIT](./LICENSE)

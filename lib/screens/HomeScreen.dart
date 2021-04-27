@@ -18,7 +18,7 @@ class HomeScreen extends StatelessWidget {
             padding: Style.paddingSymmetric(horizontal: 1, vertical: 1),
             child: MovieSimpleListView(),
           ),
-          bottomNavigationBar: AppBottomNav(),
+          bottomNavigationBar: AppBottomNav(0),
         ),
       ),
     );

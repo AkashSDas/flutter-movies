@@ -6,6 +6,10 @@ The splash screen has Rive(Flare) animation is displayed which can be found [her
 
 ![](./docs/demo.gif)
 
+## To Do
+
+- Organize and refactor the code and files
+
 ## Getting Started
 
 **Clone the repo**
